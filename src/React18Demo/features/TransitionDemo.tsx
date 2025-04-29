@@ -8,8 +8,9 @@ export default function TransitionDemo() {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value;
       setInput(value);
+      // startTransition 是一个函数，用来标记一个状态更新为过渡状态
       startTransition(() => { 
-        const list = Array(1000).fill(value);
+        const list = Array(100).fill(value);
         setList(list);
       })
     }

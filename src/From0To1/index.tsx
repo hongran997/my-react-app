@@ -10,12 +10,12 @@ export default function From0To1() {
 
   return <div>
     <h6>From0To1</h6>
-    {/* <Counter /> */}
-    {/* <TodoList/> */}
-    {/* <RegistrationForm/> */}
-    {/* <CartDemo /> */}
-    {/* <DataTable /> */}
-    {/* <VirtualScroll /> */}
-    <VirtualScroll2 />
+    <Counter />
+    {/* <TodoList/>
+    <RegistrationForm/>
+    <CartDemo />
+    <DataTable />
+    <VirtualScroll />
+    <VirtualScroll2 /> */}
   </div>
 }

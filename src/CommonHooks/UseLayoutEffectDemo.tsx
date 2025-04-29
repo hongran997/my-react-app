@@ -4,6 +4,7 @@ export default function UseLayoutEffectDemo() {
   const [count, setCount] = useState(0);
   const [layoutCount, setLayoutCount] = useState(0);
 
+  // useEffect 是在渲染后执行，是异步的，不会阻塞浏览器渲染，可能会导致页面闪烁。
   useEffect(() => {
     console.log('useEffect 执行');
     if (count === 0) {
@@ -11,6 +12,7 @@ export default function UseLayoutEffectDemo() {
     }
   }, [count]);
 
+  // useLayoutEffect 是在渲染前执行，是同步的，会阻塞，不会导致页面闪烁。
   useLayoutEffect(() => { 
     console.log('useLayoutEffect 执行');
     if (layoutCount == 0) { 
