@@ -13,7 +13,7 @@ function ImageGallery({ images }: { images: { src: string, alt: string }[] }) {
         }
       });
     },{
-      rootMargin: '100px',
+      rootMargin: '50px',
       threshold: 0,
     });
 
@@ -35,7 +35,7 @@ function ImageGallery({ images }: { images: { src: string, alt: string }[] }) {
       gridTemplateColumns: 'repeat(3, 200px)',
     }}>
     {images.map((image) => (
-      <div style={{display: 'inline-block' }}>
+      <div key={ image.src } style={{display: 'inline-block' }}>
         <img
           data-src={image.src}
           src="" // Placeholder image

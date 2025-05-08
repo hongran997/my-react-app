@@ -10,6 +10,19 @@ import TestHooks from './TestHooks';
 import From0To1 from './From0To1/index';
 import CommonHooks from "./CommonHooks";
 import ResizableText from "./components/ResizableText";
+import ImageGallery from "./components/ImageGallery";
+
+// 导入图片资源
+import img1 from './assets/2020-11-05_154523.png';
+import img2 from './assets/2020-11-05_154535.png';
+import img3 from './assets/2020-11-05_154621.png';
+import img4 from './assets/2020-11-05_154624.png';
+import img5 from './assets/2020-11-05_154634.png';
+import img6 from './assets/2020-11-05_154636.png';
+import img7 from './assets/2020-11-05_154639.png';
+import img8 from './assets/2020-11-05_154656.png';
+import avatar from './assets/avator.png';
+import music from './assets/music.png';
 
 function App() {
 
@@ -25,6 +38,21 @@ function App() {
     console.log('event bubbles up to', e.nativeEvent.currentTarget);
   }
 
+  const images = useMemo(() => {  
+    return [
+      { src: img1, alt: 'Image 1' },
+      { src: img2, alt: 'Image 2' },
+      { src: img3, alt: 'Image 3' },
+      { src: img4, alt: 'Image 4' },
+      { src: img5, alt: 'Image 5' },
+      { src: img6, alt: 'Image 6' },
+      { src: img7, alt: 'Image 7' },
+      { src: img8, alt: 'Image 8' },
+      { src: avatar, alt: 'Avatar' },
+      { src: music, alt: 'Music' }
+    ];
+  }, []);
+
   return (
     <div>
       {/* 测试冒泡的元素 */}
@@ -34,12 +62,14 @@ function App() {
 
       {/* <h2>测试</h2>
       <ResizableText>这是一段会根据容器宽度自动调整对齐方式的文本内容</ResizableText> */}
+
+      <ImageGallery images={images} />
       
       {/* <h2>复杂Hooks的使用</h2>
       <CommonHooks /> */}
 
-      <h2>从入门到精通</h2>
-      <From0To1 />
+      {/* <h2>从入门到精通</h2> */}
+      {/* <From0To1 /> */}
 
       {/* <h2>性能优化</h2>
       <PerformanceDemo /> */}
