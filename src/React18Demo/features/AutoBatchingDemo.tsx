@@ -5,8 +5,17 @@ export default function AutoBatchingDemo() {
   const [flag, setFlag] = useState(false);
 
   const handleClick = () => { 
+    // 第一种方式：
     setCount(count => count + 1);
     setFlag(flag => !flag);
+    setCount(count => count + 1);
+
+    // 第二种方式：通过ref, 并行
+
+    // 第三种方式：通过useEffect
+
+    // 第四种方式：通过flushSync
+
   }
   return (
     <div>
