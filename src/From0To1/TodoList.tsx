@@ -46,13 +46,13 @@ export default function TodoList() {
 
   return (
     <Fragment>
-      <h5>初级：Counter</h5>
+      <h5>初级：TODO</h5>
       <input ref={ inputRef }></input>
       <button onClick={ handleAdd }>添加TODO</button>
       <ul>
           { 
             list.map(item => (
-              <li key={item.id}>
+              <li key={`${item.id}-${item.text}`}>
                 <input type="checkbox" checked={item.done} onChange={ () => handleToggle(item.id)}></input>
                 {item.text}
                 <button onClick={() => handleDelete(item.id)}>-</button>

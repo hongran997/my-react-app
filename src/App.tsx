@@ -12,6 +12,8 @@ import CommonHooks from "./CommonHooks";
 import ResizableText from "./components/ResizableText";
 import ImageGallery from "./components/ImageGallery";
 import Counter from "./components/Counter";
+import DeepCounter from "./components/DeepCounter";
+import DeepDeps from "./components/DeepDeps";
 
 // 导入图片资源
 // import img1 from './assets/2020-11-05_154523.png';
@@ -65,12 +67,15 @@ function App() {
       {/* <ResizableText>这是一段会根据容器宽度自动调整对齐方式的文本内容</ResizableText> */}
       {/* <ImageGallery images={images} /> */}
       {/* <Counter seconds={1000000} /> */}
+      {/* <DeepCounter /> */}
+      {/* <DeepDeps /> */}
+
       
       {/* <h2>复杂Hooks的使用</h2>
       <CommonHooks /> */}
 
       {/* <h2>从入门到精通</h2> */}
-      {/* <From0To1 /> */}
+      <From0To1 />
 
       {/* <h2>性能优化</h2>
       <PerformanceDemo /> */}
